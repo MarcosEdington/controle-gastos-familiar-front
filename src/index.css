@@ -1,0 +1,332 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS E RESET
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+body { 
+  background-color: #f1f5f9; 
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  margin: 0; 
+  overflow-x: hidden;
+}
+
+.fw-black { font-weight: 800; }
+.italic { font-style: italic; }
+
+/* ==========================================================================
+   SIDEBAR (MENU LATERAL ELITE)
+   ========================================================================== */
+.sidebar-premium {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  left: 0; top: 0;
+  background: #111827 !important; 
+  padding: 2rem 1.5rem;
+  z-index: 1000;
+  display: flex; 
+  flex-direction: column;
+}
+
+.nav-link-custom {
+  color: rgba(255, 255, 255, 0.6) !important;
+  text-decoration: none !important;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex; 
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.nav-link-custom:hover, .nav-link-custom.active-menu {
+  background: #3b82f6 !important;
+  color: white !important;
+}
+
+.main-view { 
+  margin-left: 280px; 
+  padding: 40px; 
+  width: calc(100% - 280px);
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   CARDS PREMIUM E ESPAÇAMENTO (O CORAÇÃO DO DESIGN)
+   ========================================================================== */
+.card-premium-light {
+  background: white;
+  border: 2px solid #374151 !important; /* Cor Chumbo - mantenha se quiser */
+  border-radius: 12px;
+  overflow: hidden;
+  
+  /* SOMBRA FORTE E EVIDENTE – premium empresarial */
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.12),
+    0 10px 10px -5px rgba(0, 0, 0, 0.08) !important;
+  
+  margin-bottom: 35px !important;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease; /* animação suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse (opcional, mas deixa muito mais premium) */
+.card-premium-light:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 30px 40px -10px rgba(59, 130, 246, 0.25),
+    0 15px 15px -10px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Espaçamento vertical entre linhas de cards (Gutter do Bootstrap) */
+.row.g-4 {
+  --bs-gutter-y: 2.5rem !important; 
+}
+
+.card-title-area {
+  padding: 15px 20px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.card-label {
+  font-weight: 800; 
+  font-size: 11px;
+  letter-spacing: 1px; 
+  text-transform: uppercase;
+  color: #475569;
+}
+
+/* Variantes de cores para as barras de título */
+.bg-bar-gray { background-color: #f8fafc; }
+.bg-bar-success { background-color: #f0fdf4; }
+.bg-bar-danger { background-color: #fef2f2; }
+.bg-bar-warning { background-color: #fffbeb; }
+
+/* Especial para o card de IA ou alertas que não podem colar */
+.bg-primary.text-white {
+  margin-bottom: 35px !important;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important; /* Chumbo Profissional */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   TELA DE LOGIN (TRADING VISUAL PREMIUM)
+   ========================================================================== */
+.login-bg {
+  height: 100vh; 
+  width: 100vw;
+  background: linear-gradient(135deg, rgba(10, 25, 41, 0.7) 0%, rgba(10, 25, 41, 0.9) 100%), 
+              url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover; 
+  background-position: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  position: fixed; 
+  top: 0; left: 0; 
+  z-index: 2000;
+}
+
+.login-card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  width: 100%; 
+  max-width: 420px; 
+  padding: 45px;
+}
+
+.btn-primary-premium {
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%) !important;
+  border: none !important; 
+  color: white !important;
+  padding: 14px !important; 
+  border-radius: 12px !important;
+  font-weight: 800 !important; 
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4) !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-premium:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* ==========================================================================
+   TABELAS, SKELETONS E ALERTAS
+   ========================================================================== */
+.table-responsive {
+  margin-bottom: 0;
+}
+
+.skeleton-box {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 75%);
+  background-size: 200% 100%;
+  animation: loading-skeleton 1.5s infinite;
+  border-radius: 8px; 
+  height: 20px; 
+  margin-bottom: 10px;
+}
+
+@keyframes loading-skeleton {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Forçar SweetAlert acima de tudo */
+.swal2-container { 
+  z-index: 10000 !important; 
+}
+
+/* Efeito de hover nas linhas das tabelas para o feeling Premium */
+.table-hover tbody tr:hover {
+  background-color: rgba(59, 130, 246, 0.05) !important;
+  transition: background 0.2s;
+}
+
+/* ==========================================================================
+   CARDS DE IMPACTO - CORES VIVAS E ALTURA REDUZIDA
+   ========================================================================== */
+.card-impacto {
+  height: 120px !important; /* Altura reduzida conforme solicitado */
+  transition: transform 0.2s;
+}
+
+.card-impacto:hover { transform: translateY(-5px); }
+
+/* Fundo das barras de título com cores mais nítidas */
+.bg-bar-gray { background-color: #f1f5f9 !important; border-bottom: 1px solid #e2e8f0; }
+.bg-bar-success { background-color: #dcfce7 !important; border-bottom: 1px solid #86efac; } /* Verde mais vivo */
+.bg-bar-danger { background-color: #fee2e2 !important; border-bottom: 1px solid #fca5a5; }  /* Vermelho mais vivo */
+.bg-bar-warning { background-color: #fef3c7 !important; border-bottom: 1px solid #fcd34d; } /* Amarelo mais vivo */
+.bg-bar-primary { background-color: #dbeafe !important; border-bottom: 1px solid #93c5fd; } /* Azul mais vivo */
+
+/* Ajuste do Card Insight (IA) para não ficar vazio no Skeleton */
+.bg-card-insight {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+  color: white !important;
+  min-height: 80px;
+}
+
+/* ==========================================================================
+   SKELETON LOADING - TELA DE LOGIN (adicionado para compatibilidade com o card glass)
+   ========================================================================== */
+
+.skeleton-container {
+  filter: brightness(0.92);
+  opacity: 0.92;
+}
+
+.skeleton-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(90deg, #1e293b, #334155);
+  border-radius: 15px;
+  animation: skeleton-pulse 1.8s infinite ease-in-out;
+}
+
+.skeleton-title {
+  width: 220px;
+  max-width: 80%;
+  height: 32px;
+  background: #334155;
+  border-radius: 8px;
+  margin: 12px auto 8px;
+  animation: skeleton-pulse 1.8s infinite ease-in-out;
+}
+
+.skeleton-subtitle {
+  width: 260px;
+  max-width: 90%;
+  height: 16px;
+  background: #334155;
+  border-radius: 6px;
+  margin: 0 auto;
+  animation: skeleton-pulse 1.8s infinite ease-in-out;
+}
+
+.skeleton-label {
+  width: 160px;
+  height: 14px;
+  background: #475569;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  animation: skeleton-pulse 1.8s infinite ease-in-out;
+}
+
+.skeleton-input-icon {
+  width: 50px;
+  height: 42px;
+  background: #1f2937;
+  border-radius: 8px 0 0 8px;
+}
+
+.skeleton-input {
+  flex: 1;
+  height: 42px;
+  background: #1f2937;
+  border-radius: 0 8px 8px 0;
+  animation: skeleton-pulse 1.8s infinite ease-in-out;
+}
+
+.skeleton-button {
+  height: 56px;
+  background: linear-gradient(90deg, #1d4ed8, #2563eb88);
+  border-radius: 12px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: skeleton-pulse 2s infinite ease-in-out;
+}
+
+.skeleton-spinner {
+  width: 22px;
+  height: 22px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid rgba(255,255,255,0.9);
+  border-radius: 50%;
+  animation: spin 1.1s linear infinite;
+}
+
+.skeleton-small-text {
+  width: 120px;
+  height: 14px;
+  background: #475569;
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  animation: skeleton-pulse 1.8s infinite ease-in-out;
+}
+
+.skeleton-link-text {
+  width: 70px;
+  height: 14px;
+  background: #3b82f6;
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  animation: skeleton-pulse 1.8s infinite ease-in-out;
+}
+
+/* Animações já usadas no seu css (só garantindo consistência) */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.60; }
+  50%      { opacity: 0.95; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
