@@ -61,7 +61,7 @@ const UsuariosPage: React.FC = () => {
     setEmail(u.email);
     setCpf(u.cpf);
     setTelefone(u.telefone);
-    setSenha(''); // Senha não retornamos por segurança, ele digita uma nova se quiser mudar
+    setSenha(''); 
     setIsMinimized(false);
     window.scrollTo(0, 0);
   };
