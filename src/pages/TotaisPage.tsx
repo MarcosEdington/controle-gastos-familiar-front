@@ -17,7 +17,7 @@ const TotaisPage: React.FC = () => {
     }).catch(err => console.error("Erro na API:", err));
   }, []);
 
-  // === SKELETON PROFISSIONAL (REFORÇADO PARA O RENDER) ===
+
   if (!data) return (
     <div className="main-view animate__animated animate__fadeIn">
       {/* Skeleton do Título e Badge */}
@@ -76,7 +76,7 @@ const TotaisPage: React.FC = () => {
 
   return (
     <div className="animate__animated animate__fadeIn">
-      {/* MENSAGEM SUPERIOR COM BOTÃO DE FECHAR (RESTAURADO) */}
+
       {showWelcome && (
         <div className="card-premium-light bg-card-insight text-white p-3 mb-4 d-flex justify-content-between align-items-center shadow-sm">
           <div className="d-flex align-items-center">
@@ -100,7 +100,7 @@ const TotaisPage: React.FC = () => {
         <div className="badge bg-primary px-3 py-2 shadow-sm fw-bold">FEVEREIRO / 2026</div>
       </div>
 
-      {/* BLOCO 1: CARDS DE IMPACTO */}
+  
       <div className="row g-4 mb-4">
         <div className="col-md-3">
           <div className="card-premium-light h-100 border-primary">
@@ -144,7 +144,7 @@ const TotaisPage: React.FC = () => {
       </div>
 
       <div className="row g-4">
-        {/* BLOCO 2: ALERTAS E VENCIMENTOS */}
+
         <div className="col-md-5">
             <div className="card-premium-light">
                 <div className="card-title-area bg-dark text-white">
@@ -182,7 +182,7 @@ const TotaisPage: React.FC = () => {
             </div>
         </div>
 
-        {/* BLOCO 3: DISTRIBUIÇÃO POR MEMBRO */}
+
         <div className="col-md-7">
             <div className="card-premium-light">
                 <div className="card-title-area bg-bar-gray"><span className="card-label">Fluxo Consolidado por Membro</span></div>
